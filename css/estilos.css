@@ -1,0 +1,848 @@
+
+/* ================= VARIABLES ================= */
+
+:root {
+    --amarillo: #ffb703;
+    --naranja: #fb8500;
+    --rojo: #e63946;
+    --oscuro: #212529;
+    --negro: #111111;
+    --blanco: #ffffff;
+    --gris: #777777;
+    --gris-claro: #bdbdbd;
+    --crema: #fff3cd;
+    --crema-claro: #fff8e7;
+}
+
+/* ================= GENERAL ================= */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--oscuro);
+    background: var(--blanco);
+    overflow-x: hidden;
+}
+.titulo {
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background:
+        linear-gradient(
+            135deg,
+            #161616,
+            #242424
+        ) !important;
+    padding: 10px 0;
+    box-shadow:
+        0 3px 15px
+        rgba(0, 0, 0, 0.25);
+}
+.navbar-brand {
+    color: white !important;
+    font-size: 22px;
+    font-weight: 800;
+}
+.navbar-brand span {
+    color: var(--amarillo);
+}
+.navbar .nav-link {
+    color: #dddddd !important;
+    margin: 0 4px;
+    transition: 0.3s;
+}
+.navbar .nav-link:hover {
+    color: var(--amarillo) !important;
+}
+.navbar-toggler {
+    border-color: var(--amarillo);
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* ================= BOTONES ================= */
+.btn-warning {
+    background: var(--amarillo);
+    border-color: var(--amarillo);
+    color: var(--oscuro);
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-warning:hover {
+    background: var(--naranja);
+    border-color: var(--naranja);
+    color: white;
+}
+
+/* ================= CARRUSEL ================= */
+#carouselFoodExpress {
+    margin-top: 53px;
+}
+#carouselFoodExpress .carousel-item {
+    height: 600px;
+    position: relative;
+}
+#carouselFoodExpress .carousel-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.15)
+        );
+    z-index: 1;
+}
+#carouselFoodExpress img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+#carouselFoodExpress .carousel-caption {
+    z-index: 2;
+    top: 50%;
+    bottom: auto;
+    transform:
+        translateY(-50%);
+    text-align: left;
+    left: 10%;
+    max-width: 650px;
+}
+#carouselFoodExpress .carousel-caption h1 {
+    font-size: 55px;
+    font-weight: 800;
+    color: white;
+}
+#carouselFoodExpress .carousel-caption p {
+    font-size: 22px;
+    margin: 15px 0 25px;
+}
+/* ================= HERO ================= */
+.hero {
+    padding: 70px 0;
+    background:
+        linear-gradient(
+            135deg,
+            var(--crema),
+            white
+        );
+}
+.hero h1 {
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+.hero h1 span {
+    color: var(--naranja);
+}
+.hero p {
+    color: var(--gris);
+    font-size: 19px;
+    line-height: 1.7;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.hero .btn-warning {
+    padding: 12px 25px;
+    border-radius: 10px;
+}
+.hero-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.hero-imagen img {
+    width: 100%;
+    max-width: 550px;
+    object-fit: contain;
+    filter:
+        drop-shadow(
+            0 20px 20px
+            rgba(0, 0, 0, 0.20)
+        );
+    transition: 0.4s;
+}
+.hero-imagen img:hover {
+    transform: scale(1.05);
+}
+/* ================= NOSOTROS ================= */
+.nosotros {
+    padding: 70px 0;
+    background:
+        linear-gradient(
+            135deg,
+            white,
+            var(--crema-claro)
+        );
+}
+.nosotros-imagen {
+    width: 100%;
+    max-width: 560px;
+    margin: auto;
+}
+.nosotros-imagen img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.15);
+}
+.subtitulo-nosotros {
+    color: var(--rojo);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.nosotros h2 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.nosotros h2 span {
+    color: var(--naranja);
+}
+.nosotros p {
+    color: var(--gris);
+    line-height: 1.8;
+}
+/* ================= CARACTERISTICAS ================= */
+.caracteristicas-nosotros {
+    margin-top: 25px;
+}
+.caracteristica {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.icono-nosotros {
+    min-width: 55px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--crema);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+.icono-nosotros i {
+    color: var(--naranja);
+    font-size: 22px;
+}
+.caracteristica:hover
+.icono-nosotros {
+    background: var(--amarillo);
+    transform: scale(1.08);
+}
+.caracteristica h5 {
+    margin: 0 0 5px;
+    font-weight: bold;
+
+}
+.caracteristica p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* ================= PRESENTACION ================= */
+.presentacion {
+    background: white;
+}
+.info-box {
+    padding: 30px;
+    height: 100%;
+    background: white;
+    border-radius: 15px;
+    border-top:
+        5px solid
+        var(--amarillo);
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+.info-box:hover {
+    transform:
+        translateY(-6px);
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.15);
+}
+.info-box i {
+    font-size: 45px;
+    color: var(--amarillo);
+}
+.info-box h4 {
+    margin-top: 15px;
+}
+/* ================= MENU ================= */
+.menu-section {
+    padding: 80px 0;
+    background:
+        linear-gradient(
+            180deg,
+            #fffaf0,
+            #fff3cd
+        );
+
+}
+.menu-section .titulo {
+    font-size: 42px;
+}
+.menu-section .titulo span {
+    color: var(--naranja);
+}
+
+/* ================= TARJETA PRODUCTO ================= */
+.producto {
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.10);
+    transition: 0.3s;
+}
+.producto:hover {
+    transform:
+        translateY(-6px);
+    box-shadow:
+        0 14px 30px
+        rgba(0, 0, 0, 0.15);
+}
+
+/* ================= IMAGEN PRODUCTO ================= */
+.producto-img {
+    width: 100%;
+    height: 240px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff8e7;
+    overflow: hidden;
+}
+.producto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: 0.3s;
+}
+.producto:hover
+.producto-img img {
+    transform: scale(1.07);
+}
+
+/* ================= CONTENIDO PRODUCTO ================= */
+.producto .card-body {
+    padding: 25px;
+}
+.producto .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--oscuro);
+}
+.producto p {
+    min-height: 48px;
+    color: var(--gris);
+    font-size: 15px;
+}
+.precio {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--rojo);
+}
+.producto .btn-warning {
+    border: none;
+    border-radius: 10px;
+    padding: 9px 15px;
+}
+
+/* ================= PEDIDO ================= */
+.pedido {
+    background: #f8f9fa;
+}
+.pedido-box {
+    padding: 40px;
+    border-radius: 20px;
+    background: white;
+    border-top:
+        6px solid
+        var(--amarillo);
+    box-shadow:
+        0 5px 25px
+        rgba(0, 0, 0, 0.10);
+}
+
+/* ================= FORMULARIOS ================= */
+label {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.form-control,
+.form-select {
+    padding: 12px;
+    border-radius: 10px;
+}
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--amarillo);
+    box-shadow:
+        0 0 0 0.2rem
+        rgba(255, 183, 3, 0.20);
+}
+
+/* ================= CONTACTO ================= */
+.contacto-simple {
+    padding: 70px 0;
+    background: var(--crema-claro);
+}
+.contacto-simple h2 {
+    font-size: 38px;
+    font-weight: 800;
+}
+.contacto-simple p {
+    color: var(--gris);
+}
+.formulario-contacto {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.10);
+}
+
+/* ================= CARRITO ================= */
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom:
+        1px solid #dddddd;
+}
+.item-carrito h6 {
+    margin: 0;
+}
+.item-carrito small {
+    color: var(--gris);
+}
+
+/* ================= MODAL ================= */
+.modal-content {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+}
+.modal-header {
+    background: var(--crema-claro);
+}
+.icono-exito {
+    width: 80px;
+    height: 80px;
+    margin:
+        0 auto
+        20px;
+    border-radius: 50%;
+    background: #198754;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+
+/* ================= FOOTER ================= */
+.footer-food {
+    padding:
+        70px 0
+        25px;
+    background:
+        linear-gradient(
+            135deg,
+            #161616,
+            #242424
+        );
+    color: white;
+}
+.footer-logo {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.footer-logo span {
+    color: var(--amarillo);
+}
+.footer-description {
+    color: var(--gris-claro);
+    line-height: 1.8;
+}
+
+/* ================= REDES ================= */
+.redes-sociales {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+.social {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333333;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.social:hover {
+    color: white;
+    transform:
+        translateY(-5px);
+}
+.social.facebook:hover {
+    background: #1877f2;
+}
+.social.instagram:hover {
+    background:
+        linear-gradient(
+            45deg,
+            #f9ce34,
+            #ee2a7b,
+            #6228d7
+        );
+}
+.social.whatsapp:hover {
+    background: #25d366;
+}
+.social.tiktok:hover {
+    background: #000000;
+}
+.social.youtube:hover {
+    background: #ff0000;
+}
+
+/* ================= TITULO FOOTER ================= */
+.footer-title {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.footer-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--amarillo);
+}
+
+/* ================= ENLACES FOOTER ================= */
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer-links li {
+    margin-bottom: 14px;
+
+}
+.footer-links a {
+    color: var(--gris-claro);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer-links a i {
+    width: 25px;
+    color: var(--amarillo);
+}
+.footer-links a:hover {
+    color: var(--amarillo);
+    padding-left: 5px;
+}
+/* ================= HORARIOS ================= */
+.horario {
+    margin-bottom: 18px;
+}
+.horario p {
+    margin: 0;
+    font-weight: bold;
+}
+.horario i {
+    color: var(--amarillo);
+    margin-right: 8px;
+}
+.horario span {
+    margin-left: 25px;
+    color: #999999;
+    font-size: 14px;
+}
+
+/* ================= CONTACTO FOOTER ================= */
+.contacto-footer p {
+    color: var(--gris-claro);
+    margin-bottom: 15px;
+}
+.contacto-footer i {
+    width: 25px;
+    color: var(--amarillo);
+}
+
+/* ================= BOTON FOOTER ================= */
+.btn-footer {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 11px 20px;
+    border-radius: 25px;
+    background: var(--amarillo);
+    color: var(--oscuro);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-footer:hover {
+    background: var(--naranja);
+    color: white;
+    transform:
+        translateY(-3px);
+}
+/* ================= FOOTER INFERIOR ================= */
+.footer-line {
+    border: 0;
+    border-top:
+        1px solid #555;
+    margin:
+        45px 0
+        25px;
+}
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.footer-bottom p {
+    margin: 0;
+    color: #999;
+    font-size: 14px;
+}
+.footer-bottom strong {
+    color: var(--amarillo);
+}
+.footer-bottom a {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 5px;
+}
+.footer-bottom a:hover {
+    color: var(--amarillo);
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 992px) {
+    #carouselFoodExpress .carousel-item {
+        height: 500px;
+    }
+    #carouselFoodExpress img {
+        height: 500px;
+    }
+    #carouselFoodExpress
+    .carousel-caption h1 {
+        font-size: 42px;
+    }
+    .producto-img {
+        height: 220px;
+    }
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        margin-top: 10px;
+        padding: 15px;
+        border-radius: 12px;
+        background: #202020;
+    }
+    .navbar .btn-warning {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* RESPONSIVE CELULAR */
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 38px;
+    }
+    .hero p {
+        font-size: 17px
+    }
+    .hero-imagen {
+        margin-top: 30px;
+    }
+    .nosotros {
+        text-align: center;
+    }
+    .nosotros h2 {
+        font-size: 32px;
+    }
+    .caracteristica {
+        text-align: left;
+    }
+    .nosotros-imagen img {
+        height: 380px;
+    }
+    #carouselFoodExpress
+    .carousel-item {
+        height: 450px;
+    }
+    #carouselFoodExpress img {
+        height: 450px;
+    }
+    #carouselFoodExpress
+    .carousel-caption {
+        left: 8%;
+        right: 8%;
+        text-align: center;
+    }
+    #carouselFoodExpress
+    .carousel-caption h1 {
+        font-size: 34px;
+    }
+    #carouselFoodExpress
+    .carousel-caption p {
+        font-size: 17px;
+    }
+    .menu-section {
+        padding: 60px 0;
+    }
+    .producto-img {
+        height: 210px;
+    }
+    .pedido-box {
+        padding: 25px;
+    }
+    .footer-food {
+        text-align: center;
+    }
+    .redes-sociales {
+        justify-content: center;
+    }
+    .footer-title::after {
+        left: 50%;
+        transform:
+            translateX(-50%);
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* RESPONSIVE CELULAR PEQUEÑO */
+@media (max-width: 576px) {
+    #carouselFoodExpress
+    .carousel-item {
+        height: 400px;
+    }
+    #carouselFoodExpress img {
+        height: 400px;
+    }
+    #carouselFoodExpress
+    .carousel-caption {
+        left: 20px;
+        right: 20px;
+    }
+    #carouselFoodExpress
+    .carousel-caption h1 {
+        font-size: 28px;
+    }
+    #carouselFoodExpress
+    .carousel-caption p {
+        font-size: 15px;
+    }
+    #carouselFoodExpress
+    .carousel-caption .btn {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+    .hero {
+        padding:
+            50px 15px;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+    .nosotros {
+        padding:
+            50px 15px;
+    }
+    .nosotros-imagen img {
+        height: 300px;
+    }
+    .menu-section {
+        padding:
+            50px 15px;
+    }
+    .menu-section .titulo {
+        font-size: 30px;
+    }
+    .producto-img {
+        height: 190px;
+    }
+    .producto .card-body {
+        padding: 20px;
+    }
+    .precio {
+        font-size: 21px;
+    }
+    .pedido-box {
+        padding:
+            25px 15px;
+    }
+    .contacto-simple {
+        padding:
+            50px 15px;
+    }
+    .formulario-contacto {
+        padding: 20px;
+    }
+    .item-carrito {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-bottom a {
+        display: block;
+        margin: 8px 0;
+    }
+    .footer-bottom span {
+        display: none;
+    }
+}
